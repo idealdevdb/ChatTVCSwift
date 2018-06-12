@@ -12,11 +12,16 @@ class ChatTVCSwiftTest: IDSwiftChatTVC {
 
     override func viewDidLoad() {
         self.showCameraButton = true
-        self.showLocateMeButton = true
+        self.showLocateMeButton = false
+        self.chatType = .chat
         
         super.viewDidLoad()
-        
-        self.constructMessages()
+
+        if self.chatType == .chat {
+            self.constructMessages()
+        } else {
+            self.constructMessagesForum()
+        }
         
         self.textViewToTypeIn.contentView.backgroundColor = UIColor(red: 0.917647, green: 0.917647, blue: 0.917647, alpha: 1.000000)
         self.textViewToTypeIn.messageTextView.layer.cornerRadius = 4
@@ -58,6 +63,20 @@ class ChatTVCSwiftTest: IDSwiftChatTVC {
         self.messages.append(c10)
         self.messages.append(c11)
         self.messages.append(c12)
+        
+        self.reloadMessages(scrollAnimated: true)
+    }
+    
+    func constructMessagesForum() {
+        let c1: IDSwiftForumChatMessage = IDSwiftForumChatMessage(messageFrom: "David Buhauer", message: "Hej med dig", messageTimeStamp: "12345678", senderId: "0", contentImageId: "0", isOwnMessage: true)
+        let c2: IDSwiftForumChatMessage = IDSwiftForumChatMessage(messageFrom: "Vernon Barnes", message: "Lang besked her Lang besked herLang besked herLang besked herLang besked herLang besked herLang besked herLang besked her", messageTimeStamp: "12345678", senderId: "0", contentImageId: "0", isOwnMessage: false)
+        let c3: IDSwiftForumChatMessage = IDSwiftForumChatMessage(messageFrom: "David Buhauer", message: "Går det godt?", messageTimeStamp: "12345678", senderId: "0", contentImageId: "0", isOwnMessage: true)
+        let c4: IDSwiftForumChatMessage = IDSwiftForumChatMessage(messageFrom: "Vernon Barnes", message: "Det går fint", messageTimeStamp: "12345678", senderId: "0", contentImageId: "0", isOwnMessage: false)
+        
+        self.messages.append(c1)
+        self.messages.append(c2)
+        self.messages.append(c3)
+        self.messages.append(c4)
         
         self.reloadMessages(scrollAnimated: true)
     }

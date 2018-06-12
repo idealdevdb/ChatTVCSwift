@@ -28,15 +28,15 @@ class IDSwiftChatCell: UITableViewCell {
         
         self.selectionStyle = .none
         
-        self.txtMessage.lineBreakMode = .byWordWrapping
-        self.txtMessage.numberOfLines = 0
+        self.txtMessage?.lineBreakMode = .byWordWrapping
+        self.txtMessage?.numberOfLines = 0
     }
     
     override func prepareForReuse() {
         super.prepareForReuse()
         
-        self.imgFrom.cancelImageDownload()
-        self.imgFrom.image = nil
+        self.imgFrom?.cancelImageDownload()
+        self.imgFrom?.image = nil
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -47,30 +47,30 @@ class IDSwiftChatCell: UITableViewCell {
     
     func configCellForMessage(_ message: IDSwiftChatMessage) {
         if let messageAttributes_: [NSAttributedStringKey: Any] = self.messageAttributes {
-            self.txtMessage.attributedText = NSAttributedString(string: message.message, attributes: messageAttributes_)
+            self.txtMessage?.attributedText = NSAttributedString(string: message.message, attributes: messageAttributes_)
         } else {
-            self.txtMessage.text = message.message
+            self.txtMessage?.text = message.message
         }
         
         if let timeStampAttributes_: [NSAttributedStringKey: Any] = self.messageAttributes {
-            self.lblDate.attributedText = NSAttributedString(string: message.messageTimeStamp, attributes: timeStampAttributes_)
+            self.lblDate?.attributedText = NSAttributedString(string: message.messageTimeStamp, attributes: timeStampAttributes_)
         } else {
-            self.lblDate.text = message.messageTimeStamp
+            self.lblDate?.text = message.messageTimeStamp
         }
         
-        self.viewBackground.backgroundColor = message.isOwnMessage ? UIColor.blue : UIColor.green
-        self.imgFrom.image = message.isOwnMessage ? UIImage(named: "person1.png") : UIImage(named: "person2.png")
+        self.viewBackground?.backgroundColor = message.isOwnMessage ? UIColor.blue : UIColor.green
+        self.imgFrom?.image = message.isOwnMessage ? UIImage(named: "person1.png") : UIImage(named: "person2.png")
         
         self.setupLayoutForMessage(message)
     }
     
     func setupLayoutForMessage(_ message: IDSwiftChatMessage) {
         if message.isOwnMessage {
-            self.textMessageLeadingConstraint.isActive = false
-            self.profileContainerLeadingConstraint.isActive = false
+            self.textMessageLeadingConstraint?.isActive = false
+            self.profileContainerLeadingConstraint?.isActive = false
         } else {
-            self.textMessageLeadingConstraint.isActive = true
-            self.profileContainerLeadingConstraint.isActive = true
+            self.textMessageLeadingConstraint?.isActive = true
+            self.profileContainerLeadingConstraint?.isActive = true
         }
         
         self.layoutIfNeeded()

@@ -20,8 +20,8 @@ class IDSwiftChatTVC: UIViewController {
     @IBOutlet var textViewToTypeIn: IDSwiftMessageComposerView!
     @IBOutlet var messageInputContainerViewBottomConstraint: NSLayoutConstraint!
     
-    internal let CELL_NIB_NAME: String = String(describing: IDSwiftChatCell.self)
-    internal let CELL_IDENTIFIER: String = String(describing: IDSwiftChatCell.self)
+    internal let CELL_NIB_NAME_CHAT: String = String(describing: IDSwiftChatCell.self)
+    internal let CELL_NIB_NAME_FORUM: String = String(describing: IDSwiftForumChatCell.self)
     
     lazy var messages: [IDSwiftChatMessage] = [IDSwiftChatMessage]()
     lazy var chatType: IDSwiftChatType = .chat
@@ -63,7 +63,13 @@ class IDSwiftChatTVC: UIViewController {
     }
     
     func getNibCellName() -> String {
-        return CELL_NIB_NAME
+        switch self.chatType {
+        case .chat:
+            return CELL_NIB_NAME_CHAT
+            
+        case .forum:
+            return CELL_NIB_NAME_FORUM
+        }
     }
 
     @objc func handleKeyboardNotification(notification: Notification) {
@@ -156,12 +162,25 @@ extension IDSwiftChatTVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell_: IDSwiftChatCell?
         
-        if let cell: IDSwiftChatCell = tableView.dequeueReusableCell(withIdentifier: self.getNibCellName()) as? IDSwiftChatCell {
-            let chatMessage: IDSwiftChatMessage = self.messageForIndexPath(indexPath)
-            cell.configCellForMessage(chatMessage)
-            cell_ = cell
+        let chatMessage: IDSwiftChatMessage = self.messageForIndexPath(indexPath)
+        
+        switch self.chatType {
+        case .chat:
+            if let cell: IDSwiftChatCell = tableView.dequeueReusableCell(withIdentifier: self.getNibCellName()) as? IDSwiftChatCell {
+                cell_ = cell
+            }
+            break
+            
+        case .forum:
+            if let cell: IDSwiftForumChatCell = tableView.dequeueReusableCell(withIdentifier: self.getNibCellName()) as? IDSwiftForumChatCell {
+                cell_ = cell
+            }
+            
+            break
         }
         
+        cell_?.configCellForMessage(chatMessage)
+
         return cell_ ?? UITableViewCell()
     }
     
