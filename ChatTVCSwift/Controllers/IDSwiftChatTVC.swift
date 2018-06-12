@@ -49,7 +49,7 @@ class IDSwiftChatTVC: UIViewController {
         super.viewDidLoad()
         
         self.setupChatTableView()
-        self.setupInputComponents()
+        self.setupTextView()
         
         self.subscribeForKeyboardNotifications(true)
         
@@ -91,19 +91,6 @@ class IDSwiftChatTVC: UIViewController {
         self.chatTableView?.separatorStyle = .none
     }
     
-    // MARK: Input components
-    func setupInputComponents() {
-        self.setupTextView()
-        
-        if self.showCameraButton {
-            self.setupCameraInputButton()
-        }
-        
-        if (self.showLocateMeButton) {
-            self.setupLocateMeInputButton()
-        }
-    }
-    
     func setupTextView() {
         self.textViewToTypeIn.messageTextView.clipsToBounds = true
         self.textViewToTypeIn.messageTextView.layer.backgroundColor = UIColor.white.cgColor
@@ -111,13 +98,15 @@ class IDSwiftChatTVC: UIViewController {
         self.textViewToTypeIn.messageTextView.layer.borderWidth = 1.0
         self.textViewToTypeIn.messageTextView.layer.cornerRadius = 5.0
         self.textViewToTypeIn.messageTextView.layer.masksToBounds = true
-    }
-    
-    func setupCameraInputButton() {
-        //TODO:
-    }
-    func setupLocateMeInputButton() {
-        //TODO:
+        self.textViewToTypeIn.delegate = self
+        
+        if self.showCameraButton {
+            self.textViewToTypeIn.setupCameraInputButton()
+        }
+        
+        if self.showLocateMeButton {
+            self.textViewToTypeIn.setupLocateMeInputButton()
+        }
     }
     
     final func reloadMessages(scrollAnimated: Bool) {
@@ -190,5 +179,23 @@ extension IDSwiftChatTVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return 53
+    }
+}
+
+extension IDSwiftChatTVC: IDSwiftMessageComposerViewDelegate {
+    func cameraButtonImage(_ sender: IDSwiftMessageComposerView) -> UIImage? {
+        return nil
+    }
+    
+    func cameraButtonPressed() {
+        
+    }
+    
+    func locateMeButtonImage(_ sender: IDSwiftMessageComposerView) -> UIImage? {
+        return nil
+    }
+    
+    func locateMeButtonPressed() {
+        
     }
 }

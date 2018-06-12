@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IDSwiftMessageComposerView" customModule="ChatTVCSwift" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="jgk-g4-NsI"/>
+                <outlet property="inputStackView" destination="0E4-ED-7XU" id="fqV-qn-ZzA"/>
                 <outlet property="messageTextView" destination="iq8-LI-AQe" id="G2n-QN-pKL"/>
                 <outlet property="sendButton" destination="Agn-9q-ffB" id="TCw-0B-dXW"/>
             </connections>
@@ -25,11 +26,26 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ufv-9d-HKx">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
                     <subviews>
-                        <view contentMode="scaleToFill" verticalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="ATf-Bn-EdQ">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ATf-Bn-EdQ">
                             <rect key="frame" x="10" y="0.0" width="355" height="59"/>
                             <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0E4-ED-7XU">
+                                    <rect key="frame" x="0.0" y="10" width="0.0" height="39"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qrC-uv-9QC">
+                                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="39"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" id="f7D-D4-hAe"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="39" id="EOW-5r-WdB"/>
+                                    </constraints>
+                                </stackView>
                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iq8-LI-AQe" customClass="IDTextView">
-                                    <rect key="frame" x="0.0" y="10" width="297" height="39"/>
+                                    <rect key="frame" x="10" y="10" width="287" height="39"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -48,9 +64,11 @@
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
+                                <constraint firstAttribute="bottom" secondItem="0E4-ED-7XU" secondAttribute="bottom" constant="10" id="8Zl-aV-NMj"/>
                                 <constraint firstAttribute="bottom" secondItem="Agn-9q-ffB" secondAttribute="bottom" id="8wQ-BZ-vBo"/>
+                                <constraint firstItem="iq8-LI-AQe" firstAttribute="leading" secondItem="0E4-ED-7XU" secondAttribute="trailing" constant="10" id="9ue-mF-f2X"/>
+                                <constraint firstItem="0E4-ED-7XU" firstAttribute="leading" secondItem="ATf-Bn-EdQ" secondAttribute="leading" id="Fap-CD-bzC"/>
                                 <constraint firstItem="Agn-9q-ffB" firstAttribute="leading" secondItem="iq8-LI-AQe" secondAttribute="trailing" constant="10" id="NCd-rY-2SB"/>
-                                <constraint firstItem="iq8-LI-AQe" firstAttribute="leading" secondItem="ATf-Bn-EdQ" secondAttribute="leading" id="XZf-eL-Tud"/>
                                 <constraint firstItem="iq8-LI-AQe" firstAttribute="top" secondItem="ATf-Bn-EdQ" secondAttribute="top" constant="10" id="cMa-Il-RRq"/>
                                 <constraint firstAttribute="bottom" secondItem="iq8-LI-AQe" secondAttribute="bottom" constant="10" id="vw4-Pe-8MM"/>
                                 <constraint firstAttribute="trailing" secondItem="Agn-9q-ffB" secondAttribute="trailing" id="zJV-fx-2qH"/>

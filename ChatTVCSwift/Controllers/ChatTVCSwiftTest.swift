@@ -11,6 +11,9 @@ import UIKit
 class ChatTVCSwiftTest: IDSwiftChatTVC {
 
     override func viewDidLoad() {
+        self.showCameraButton = true
+        self.showLocateMeButton = true
+        
         super.viewDidLoad()
         
         self.constructMessages()
@@ -57,5 +60,13 @@ class ChatTVCSwiftTest: IDSwiftChatTVC {
         self.messages.append(c12)
         
         self.reloadMessages(scrollAnimated: true)
+    }
+    
+    override func cameraButtonImage(_ sender: IDSwiftMessageComposerView) -> UIImage? {
+        return UIImage(named: "icon_camera.png")
+    }
+    
+    override func locateMeButtonImage(_ sender: IDSwiftMessageComposerView) -> UIImage? {
+        return UIImage(named: "icon_locate_me.png")
     }
 }
