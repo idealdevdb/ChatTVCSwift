@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChatTVCSwift" customModule="ChatTVCSwift" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IDSwiftChatTVC" customModule="ChatTVCSwift" customModuleProvider="target">
             <connections>
                 <outlet property="chatTableView" destination="KPM-AR-HqZ" id="0MT-Hi-2zD"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -29,8 +29,8 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="KPM-AR-HqZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="DTL-15-tJv"/>
-                <constraint firstAttribute="bottom" secondItem="KPM-AR-HqZ" secondAttribute="bottom" id="YT4-V5-0GQ"/>
                 <constraint firstAttribute="trailing" secondItem="KPM-AR-HqZ" secondAttribute="trailing" id="Zhc-wS-Evp"/>
+                <constraint firstAttribute="bottom" secondItem="KPM-AR-HqZ" secondAttribute="bottom" id="Zx4-0n-I3p"/>
                 <constraint firstItem="KPM-AR-HqZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="rNa-ao-2a1"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ChatMessageSwift {
+class IDSwiftChatMessage {
     public lazy var message: String = String()
     public lazy var messageTimeStamp: String = String()
     public lazy var senderId: String = String()

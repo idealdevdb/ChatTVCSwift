@@ -9,7 +9,7 @@
 import UIKit
 import IDCommonNeeds
 
-class ChatCellSwift: UITableViewCell {
+class IDSwiftChatCell: UITableViewCell {
     
     @IBOutlet var imgMessage: IDAutoFetchImageView!
     @IBOutlet var imgFrom: IDAutoFetchImageView!
@@ -20,9 +20,12 @@ class ChatCellSwift: UITableViewCell {
     @IBOutlet var textMessageLeadingConstraint: NSLayoutConstraint!
     @IBOutlet var profileContainerLeadingConstraint: NSLayoutConstraint!
     
+    var timeStampAttributes: [NSAttributedStringKey: Any]?
+    var messageAttributes: [NSAttributedStringKey: Any]?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
         self.selectionStyle = .none
         
         self.txtMessage.lineBreakMode = .byWordWrapping
@@ -42,8 +45,18 @@ class ChatCellSwift: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configCellForMessage(_ message: ChatMessageSwift) {
-        self.txtMessage.text = message.message
+    func configCellForMessage(_ message: IDSwiftChatMessage) {
+        if let messageAttributes_: [NSAttributedStringKey: Any] = self.messageAttributes {
+            self.txtMessage.attributedText = NSAttributedString(string: message.message, attributes: messageAttributes_)
+        } else {
+            self.txtMessage.text = message.message
+        }
+        
+        if let timeStampAttributes_: [NSAttributedStringKey: Any] = self.messageAttributes {
+            self.lblDate.attributedText = NSAttributedString(string: message.messageTimeStamp, attributes: timeStampAttributes_)
+        } else {
+            self.lblDate.text = message.messageTimeStamp
+        }
         
         self.viewBackground.backgroundColor = message.isOwnMessage ? UIColor.blue : UIColor.green
         self.imgFrom.image = message.isOwnMessage ? UIImage(named: "person1.png") : UIImage(named: "person2.png")
@@ -51,7 +64,7 @@ class ChatCellSwift: UITableViewCell {
         self.setupLayoutForMessage(message)
     }
     
-    func setupLayoutForMessage(_ message: ChatMessageSwift) {
+    func setupLayoutForMessage(_ message: IDSwiftChatMessage) {
         if message.isOwnMessage {
             self.textMessageLeadingConstraint.isActive = false
             self.profileContainerLeadingConstraint.isActive = false

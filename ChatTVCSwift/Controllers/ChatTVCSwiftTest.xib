@@ -13,6 +13,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChatTVCSwiftTest" customModule="ChatTVCSwift" customModuleProvider="target">
             <connections>
                 <outlet property="chatTableView" destination="kaL-sz-GmX" id="kjU-t3-33H"/>
+                <outlet property="messageInputContainerViewBottomConstraint" destination="agJ-BG-5mm" id="AK0-oa-E9K"/>
+                <outlet property="textViewToTypeIn" destination="bTt-8y-EHO" id="6gM-sF-85S"/>
                 <outlet property="view" destination="iN0-l3-epB" id="sJZ-kP-xjD"/>
             </connections>
         </placeholder>
@@ -22,18 +24,26 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="kaL-sz-GmX">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="619"/>
                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                 </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bTt-8y-EHO" customClass="IDSwiftMessageComposerView" customModule="ChatTVCSwift" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="619" width="375" height="48"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="kaL-sz-GmX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="2T0-0X-3Yo"/>
+                <constraint firstItem="bTt-8y-EHO" firstAttribute="trailing" secondItem="kaL-sz-GmX" secondAttribute="trailing" id="7R2-dC-ZZM"/>
+                <constraint firstItem="bTt-8y-EHO" firstAttribute="top" secondItem="kaL-sz-GmX" secondAttribute="bottom" id="DAb-kG-8Xy"/>
+                <constraint firstItem="bTt-8y-EHO" firstAttribute="leading" secondItem="kaL-sz-GmX" secondAttribute="leading" id="HPe-HP-piY"/>
+                <constraint firstAttribute="bottom" secondItem="bTt-8y-EHO" secondAttribute="bottom" id="agJ-BG-5mm"/>
                 <constraint firstAttribute="trailing" secondItem="kaL-sz-GmX" secondAttribute="trailing" id="eQx-Qa-2xa"/>
                 <constraint firstItem="kaL-sz-GmX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="jH6-GE-RUR"/>
-                <constraint firstAttribute="bottom" secondItem="kaL-sz-GmX" secondAttribute="bottom" id="lSh-FU-brC"/>
+                <constraint firstItem="bTt-8y-EHO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="619" placeholder="YES" id="uEd-Fj-8yz"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <viewLayoutGuide key="safeArea" id="GeB-Kc-uWo"/>
         </view>
     </objects>
 </document>

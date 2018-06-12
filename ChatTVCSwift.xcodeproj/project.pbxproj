@@ -10,15 +10,18 @@
 		461609D220CEACC200079586 /* IDCommonNeeds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 468E299120CEAC2200AA9378 /* IDCommonNeeds.framework */; };
 		461609D320CEACC200079586 /* IDCommonNeeds.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 468E299120CEAC2200AA9378 /* IDCommonNeeds.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		461609D820CEAD0700079586 /* ChatTVCSwiftTest.xib in Resources */ = {isa = PBXBuildFile; fileRef = 461609D720CEAD0700079586 /* ChatTVCSwiftTest.xib */; };
+		466D971120CFBF300002C6A7 /* IDCommonNeedsSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 466D970A20CFBF1C0002C6A7 /* IDCommonNeedsSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		468E294B20CE945500AA9378 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468E294A20CE945500AA9378 /* AppDelegate.swift */; };
 		468E295220CE945600AA9378 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 468E295120CE945600AA9378 /* Assets.xcassets */; };
 		468E295520CE945600AA9378 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 468E295320CE945600AA9378 /* LaunchScreen.storyboard */; };
-		468E296120CE963300AA9378 /* ChatTVCSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468E295F20CE963300AA9378 /* ChatTVCSwift.swift */; };
-		468E296220CE963300AA9378 /* ChatTVCSwift.xib in Resources */ = {isa = PBXBuildFile; fileRef = 468E296020CE963300AA9378 /* ChatTVCSwift.xib */; };
-		468E296520CE9AA600AA9378 /* ChatCellSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468E296320CE9AA600AA9378 /* ChatCellSwift.swift */; };
-		468E296620CE9AA600AA9378 /* ChatCellSwift.xib in Resources */ = {isa = PBXBuildFile; fileRef = 468E296420CE9AA600AA9378 /* ChatCellSwift.xib */; };
+		468E296120CE963300AA9378 /* IDSwiftChatTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468E295F20CE963300AA9378 /* IDSwiftChatTVC.swift */; };
+		468E296520CE9AA600AA9378 /* IDSwiftChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468E296320CE9AA600AA9378 /* IDSwiftChatCell.swift */; };
+		468E296620CE9AA600AA9378 /* IDSwiftChatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 468E296420CE9AA600AA9378 /* IDSwiftChatCell.xib */; };
 		468E298720CE9D2000AA9378 /* ChatTVCSwiftTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468E298620CE9D2000AA9378 /* ChatTVCSwiftTest.swift */; };
-		468E298A20CE9EE200AA9378 /* ChatMessageSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468E298920CE9EE200AA9378 /* ChatMessageSwift.swift */; };
+		468E298A20CE9EE200AA9378 /* IDSwiftChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468E298920CE9EE200AA9378 /* IDSwiftChatMessage.swift */; };
+		46AB85D220CFE227005AF4E2 /* IDSwiftMessageComposerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46AB85D120CFE227005AF4E2 /* IDSwiftMessageComposerView.xib */; };
+		46AB85D820CFE240005AF4E2 /* IDSwiftMessageComposerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB85D720CFE240005AF4E2 /* IDSwiftMessageComposerView.swift */; };
+		46AB85DD20CFE579005AF4E2 /* IDSwiftChatTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46AB85DC20CFE579005AF4E2 /* IDSwiftChatTVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +31,41 @@
 			proxyType = 1;
 			remoteGlobalIDString = 922E1BF119D061DB0061533E;
 			remoteInfo = IDCommonNeeds;
+		};
+		466D970920CFBF1C0002C6A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 466D970020CFBF1C0002C6A7 /* IDCommonNeedsSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C840E5501CB7DE3500A97D91;
+			remoteInfo = IDCommonNeedsSwift;
+		};
+		466D970B20CFBF1C0002C6A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 466D970020CFBF1C0002C6A7 /* IDCommonNeedsSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C840E55A1CB7DE3500A97D91;
+			remoteInfo = iOSTests;
+		};
+		466D970D20CFBF1C0002C6A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 466D970020CFBF1C0002C6A7 /* IDCommonNeedsSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C840E5A31CB7DFC700A97D91;
+			remoteInfo = IDCommonNeedstvOS;
+		};
+		466D970F20CFBF1C0002C6A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 466D970020CFBF1C0002C6A7 /* IDCommonNeedsSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C840E5AC1CB7DFC800A97D91;
+			remoteInfo = tvOSTests;
+		};
+		466D971220CFBF350002C6A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 466D970020CFBF1C0002C6A7 /* IDCommonNeedsSwift.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C840E54F1CB7DE3500A97D91;
+			remoteInfo = IDCommonNeedsSwift;
 		};
 		468E299020CEAC2200AA9378 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +90,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				466D971120CFBF300002C6A7 /* IDCommonNeedsSwift.framework in Embed Frameworks */,
 				461609D320CEACC200079586 /* IDCommonNeeds.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -61,18 +100,21 @@
 
 /* Begin PBXFileReference section */
 		461609D720CEAD0700079586 /* ChatTVCSwiftTest.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatTVCSwiftTest.xib; sourceTree = "<group>"; };
+		466D970020CFBF1C0002C6A7 /* IDCommonNeedsSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = IDCommonNeedsSwift.xcodeproj; path = ../../ios/icommonneeds/IDCommonNeedsSwift/IDCommonNeedsSwift.xcodeproj; sourceTree = "<group>"; };
 		468E294720CE945500AA9378 /* ChatTVCSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatTVCSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		468E294A20CE945500AA9378 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		468E295120CE945600AA9378 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		468E295420CE945600AA9378 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		468E295620CE945600AA9378 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		468E295F20CE963300AA9378 /* ChatTVCSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTVCSwift.swift; sourceTree = "<group>"; };
-		468E296020CE963300AA9378 /* ChatTVCSwift.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatTVCSwift.xib; sourceTree = "<group>"; };
-		468E296320CE9AA600AA9378 /* ChatCellSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCellSwift.swift; sourceTree = "<group>"; };
-		468E296420CE9AA600AA9378 /* ChatCellSwift.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatCellSwift.xib; sourceTree = "<group>"; };
+		468E295F20CE963300AA9378 /* IDSwiftChatTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDSwiftChatTVC.swift; sourceTree = "<group>"; };
+		468E296320CE9AA600AA9378 /* IDSwiftChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDSwiftChatCell.swift; sourceTree = "<group>"; };
+		468E296420CE9AA600AA9378 /* IDSwiftChatCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IDSwiftChatCell.xib; sourceTree = "<group>"; };
 		468E298620CE9D2000AA9378 /* ChatTVCSwiftTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTVCSwiftTest.swift; sourceTree = "<group>"; };
-		468E298920CE9EE200AA9378 /* ChatMessageSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageSwift.swift; sourceTree = "<group>"; };
+		468E298920CE9EE200AA9378 /* IDSwiftChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDSwiftChatMessage.swift; sourceTree = "<group>"; };
 		468E298B20CEAC2200AA9378 /* IDCommonNeeds.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = IDCommonNeeds.xcodeproj; path = ../../ios/icommonneeds/IDCommonNeeds.xcodeproj; sourceTree = "<group>"; };
+		46AB85D120CFE227005AF4E2 /* IDSwiftMessageComposerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IDSwiftMessageComposerView.xib; sourceTree = "<group>"; };
+		46AB85D720CFE240005AF4E2 /* IDSwiftMessageComposerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDSwiftMessageComposerView.swift; sourceTree = "<group>"; };
+		46AB85DC20CFE579005AF4E2 /* IDSwiftChatTVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IDSwiftChatTVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +129,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		466D970120CFBF1C0002C6A7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				466D970A20CFBF1C0002C6A7 /* IDCommonNeedsSwift.framework */,
+				466D970C20CFBF1C0002C6A7 /* iOSTests.xctest */,
+				466D970E20CFBF1C0002C6A7 /* IDCommonNeedsSwift.framework */,
+				466D971020CFBF1C0002C6A7 /* tvOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		468E293E20CE945500AA9378 = {
 			isa = PBXGroup;
 			children = (
@@ -121,7 +174,7 @@
 		468E295C20CE95CB00AA9378 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				468E298920CE9EE200AA9378 /* ChatMessageSwift.swift */,
+				468E298920CE9EE200AA9378 /* IDSwiftChatMessage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -129,8 +182,10 @@
 		468E295D20CE95D000AA9378 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				468E296320CE9AA600AA9378 /* ChatCellSwift.swift */,
-				468E296420CE9AA600AA9378 /* ChatCellSwift.xib */,
+				468E296320CE9AA600AA9378 /* IDSwiftChatCell.swift */,
+				468E296420CE9AA600AA9378 /* IDSwiftChatCell.xib */,
+				46AB85D120CFE227005AF4E2 /* IDSwiftMessageComposerView.xib */,
+				46AB85D720CFE240005AF4E2 /* IDSwiftMessageComposerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -138,8 +193,8 @@
 		468E295E20CE95D400AA9378 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				468E295F20CE963300AA9378 /* ChatTVCSwift.swift */,
-				468E296020CE963300AA9378 /* ChatTVCSwift.xib */,
+				468E295F20CE963300AA9378 /* IDSwiftChatTVC.swift */,
+				46AB85DC20CFE579005AF4E2 /* IDSwiftChatTVC.xib */,
 				468E298620CE9D2000AA9378 /* ChatTVCSwiftTest.swift */,
 				461609D720CEAD0700079586 /* ChatTVCSwiftTest.xib */,
 			);
@@ -150,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				468E298B20CEAC2200AA9378 /* IDCommonNeeds.xcodeproj */,
+				466D970020CFBF1C0002C6A7 /* IDCommonNeedsSwift.xcodeproj */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -178,6 +234,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				466D971320CFBF350002C6A7 /* PBXTargetDependency */,
 				461609D520CEACC200079586 /* PBXTargetDependency */,
 			);
 			name = ChatTVCSwift;
@@ -216,6 +273,10 @@
 					ProductGroup = 468E298C20CEAC2200AA9378 /* Products */;
 					ProjectRef = 468E298B20CEAC2200AA9378 /* IDCommonNeeds.xcodeproj */;
 				},
+				{
+					ProductGroup = 466D970120CFBF1C0002C6A7 /* Products */;
+					ProjectRef = 466D970020CFBF1C0002C6A7 /* IDCommonNeedsSwift.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -225,6 +286,34 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		466D970A20CFBF1C0002C6A7 /* IDCommonNeedsSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = IDCommonNeedsSwift.framework;
+			remoteRef = 466D970920CFBF1C0002C6A7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		466D970C20CFBF1C0002C6A7 /* iOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = iOSTests.xctest;
+			remoteRef = 466D970B20CFBF1C0002C6A7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		466D970E20CFBF1C0002C6A7 /* IDCommonNeedsSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = IDCommonNeedsSwift.framework;
+			remoteRef = 466D970D20CFBF1C0002C6A7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		466D971020CFBF1C0002C6A7 /* tvOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = tvOSTests.xctest;
+			remoteRef = 466D970F20CFBF1C0002C6A7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		468E299120CEAC2200AA9378 /* IDCommonNeeds.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -246,11 +335,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46AB85DD20CFE579005AF4E2 /* IDSwiftChatTVC.xib in Resources */,
 				468E295520CE945600AA9378 /* LaunchScreen.storyboard in Resources */,
 				468E295220CE945600AA9378 /* Assets.xcassets in Resources */,
-				468E296220CE963300AA9378 /* ChatTVCSwift.xib in Resources */,
 				461609D820CEAD0700079586 /* ChatTVCSwiftTest.xib in Resources */,
-				468E296620CE9AA600AA9378 /* ChatCellSwift.xib in Resources */,
+				468E296620CE9AA600AA9378 /* IDSwiftChatCell.xib in Resources */,
+				46AB85D220CFE227005AF4E2 /* IDSwiftMessageComposerView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,10 +351,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				468E296120CE963300AA9378 /* ChatTVCSwift.swift in Sources */,
+				468E296120CE963300AA9378 /* IDSwiftChatTVC.swift in Sources */,
 				468E294B20CE945500AA9378 /* AppDelegate.swift in Sources */,
-				468E296520CE9AA600AA9378 /* ChatCellSwift.swift in Sources */,
-				468E298A20CE9EE200AA9378 /* ChatMessageSwift.swift in Sources */,
+				468E296520CE9AA600AA9378 /* IDSwiftChatCell.swift in Sources */,
+				46AB85D820CFE240005AF4E2 /* IDSwiftMessageComposerView.swift in Sources */,
+				468E298A20CE9EE200AA9378 /* IDSwiftChatMessage.swift in Sources */,
 				468E298720CE9D2000AA9378 /* ChatTVCSwiftTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,6 +367,11 @@
 			isa = PBXTargetDependency;
 			name = IDCommonNeeds;
 			targetProxy = 461609D420CEACC200079586 /* PBXContainerItemProxy */;
+		};
+		466D971320CFBF350002C6A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = IDCommonNeedsSwift;
+			targetProxy = 466D971220CFBF350002C6A7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
