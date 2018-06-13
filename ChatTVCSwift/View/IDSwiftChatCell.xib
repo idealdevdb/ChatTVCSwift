@@ -19,10 +19,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cH5-aB-wfr" customClass="IDAutoFetchImageView">
-                        <rect key="frame" x="55" y="18" width="289" height="82.5"/>
+                        <rect key="frame" x="50" y="18" width="289" height="82.5"/>
                     </imageView>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h77-fv-gaM">
-                        <rect key="frame" x="65" y="23" width="269" height="72.5"/>
+                        <rect key="frame" x="60" y="23" width="269" height="72.5"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <string key="text">ksdlmlksdfmlmfldsmlkmfklsdmflmsfmsfdlksdmlsflsdmsdlækfmdslkfsdflmkldsfdslmldsksdlmlksdfmlmfldsmlkmfklsdmflmsfmsfdlksdmlsflsdmsdlækfmdslkfsdflmkldsfdslmldsksdlmlksdfmlmfldsmlkmfklsdmflmsfmsfdlksdmlsflsdmsdlækfmdslkfsdflmkldsfdslmldsksdlmlksdfmlmfldsmlkmfklsdmflmsfmsfdlksdmlsflsdmsdlækfmdslkfsdflmkldsfdslmldsksdlmlksdfmlmfldsmlkmfklsdmflmsfmsfdlksdmlsflsdmsdlækfmdslkfsdflmkldsfdslmlds</string>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -30,7 +30,7 @@
                         <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZIH-H7-9Au">
-                        <rect key="frame" x="0.0" y="0.0" width="60" height="105.5"/>
+                        <rect key="frame" x="334" y="0.0" width="60" height="105.5"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="person1" translatesAutoresizingMaskIntoConstraints="NO" id="zam-dx-KPh" customClass="IDAutoFetchImageView">
                                 <rect key="frame" x="10" y="60.5" width="40" height="40"/>
@@ -79,9 +79,9 @@
                 </constraints>
                 <variation key="default">
                     <mask key="constraints">
-                        <exclude reference="wjU-ij-qCm"/>
-                        <exclude reference="79R-Uk-xmg"/>
-                        <exclude reference="Bf1-gX-0RV"/>
+                        <exclude reference="PNJ-TX-Zh1"/>
+                        <exclude reference="X7a-tO-y1F"/>
+                        <exclude reference="lTw-7q-6ex"/>
                     </mask>
                 </variation>
             </tableViewCellContentView>

@@ -10,6 +10,7 @@ import UIKit
 import IDCommonNeeds
 
 @objc protocol IDSwiftMessageComposerViewDelegate : class {
+    func messageComposerSendMessageClickedWithMessage(_ message: String)
     func cameraButtonImage(_ sender: IDSwiftMessageComposerView) -> UIImage?
     func cameraButtonPressed()
     func locateMeButtonImage(_ sender: IDSwiftMessageComposerView) -> UIImage?
@@ -94,6 +95,9 @@ class IDSwiftMessageComposerView: UIView {
     }
     
     @IBAction func didTapSendButton(_ sender: UIButton) {
-        
+        if let text_: String = self.messageTextView?.text {
+            self.messageTextView.text = ""
+            self.delegate?.messageComposerSendMessageClickedWithMessage(text_)
+        }
     }
 }

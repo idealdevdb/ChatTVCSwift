@@ -22,9 +22,13 @@
 		46AB85D220CFE227005AF4E2 /* IDSwiftMessageComposerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46AB85D120CFE227005AF4E2 /* IDSwiftMessageComposerView.xib */; };
 		46AB85D820CFE240005AF4E2 /* IDSwiftMessageComposerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB85D720CFE240005AF4E2 /* IDSwiftMessageComposerView.swift */; };
 		46AB85DD20CFE579005AF4E2 /* IDSwiftChatTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46AB85DC20CFE579005AF4E2 /* IDSwiftChatTVC.xib */; };
-		46AB85E020D0047C005AF4E2 /* IDSwiftForumChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB85DE20D0047C005AF4E2 /* IDSwiftForumChatCell.swift */; };
-		46AB85E120D0047C005AF4E2 /* IDSwiftForumChatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46AB85DF20D0047C005AF4E2 /* IDSwiftForumChatCell.xib */; };
+		46AB85E020D0047C005AF4E2 /* IDSwiftForumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB85DE20D0047C005AF4E2 /* IDSwiftForumCell.swift */; };
+		46AB85E120D0047C005AF4E2 /* IDSwiftForumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46AB85DF20D0047C005AF4E2 /* IDSwiftForumCell.xib */; };
 		46AB85E320D00C9B005AF4E2 /* IDSwiftForumChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB85E220D00C9B005AF4E2 /* IDSwiftForumChatMessage.swift */; };
+		46AB85ED20D13795005AF4E2 /* IDSwiftChatCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB85EC20D13795005AF4E2 /* IDSwiftChatCellTest.swift */; };
+		46AB85EF20D13C29005AF4E2 /* IDSwiftChatCellTest.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46AB85EE20D13C29005AF4E2 /* IDSwiftChatCellTest.xib */; };
+		46AB85F220D14B46005AF4E2 /* IDSwiftForumCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB85F020D14B46005AF4E2 /* IDSwiftForumCellTest.swift */; };
+		46AB85F320D14B46005AF4E2 /* IDSwiftForumCellTest.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46AB85F120D14B46005AF4E2 /* IDSwiftForumCellTest.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,9 +122,13 @@
 		46AB85D120CFE227005AF4E2 /* IDSwiftMessageComposerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IDSwiftMessageComposerView.xib; sourceTree = "<group>"; };
 		46AB85D720CFE240005AF4E2 /* IDSwiftMessageComposerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDSwiftMessageComposerView.swift; sourceTree = "<group>"; };
 		46AB85DC20CFE579005AF4E2 /* IDSwiftChatTVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IDSwiftChatTVC.xib; sourceTree = "<group>"; };
-		46AB85DE20D0047C005AF4E2 /* IDSwiftForumChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDSwiftForumChatCell.swift; sourceTree = "<group>"; };
-		46AB85DF20D0047C005AF4E2 /* IDSwiftForumChatCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IDSwiftForumChatCell.xib; sourceTree = "<group>"; };
+		46AB85DE20D0047C005AF4E2 /* IDSwiftForumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDSwiftForumCell.swift; sourceTree = "<group>"; };
+		46AB85DF20D0047C005AF4E2 /* IDSwiftForumCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IDSwiftForumCell.xib; sourceTree = "<group>"; };
 		46AB85E220D00C9B005AF4E2 /* IDSwiftForumChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDSwiftForumChatMessage.swift; sourceTree = "<group>"; };
+		46AB85EC20D13795005AF4E2 /* IDSwiftChatCellTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDSwiftChatCellTest.swift; sourceTree = "<group>"; };
+		46AB85EE20D13C29005AF4E2 /* IDSwiftChatCellTest.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IDSwiftChatCellTest.xib; sourceTree = "<group>"; };
+		46AB85F020D14B46005AF4E2 /* IDSwiftForumCellTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDSwiftForumCellTest.swift; sourceTree = "<group>"; };
+		46AB85F120D14B46005AF4E2 /* IDSwiftForumCellTest.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IDSwiftForumCellTest.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,8 +202,8 @@
 				468E296420CE9AA600AA9378 /* IDSwiftChatCell.xib */,
 				46AB85D120CFE227005AF4E2 /* IDSwiftMessageComposerView.xib */,
 				46AB85D720CFE240005AF4E2 /* IDSwiftMessageComposerView.swift */,
-				46AB85DE20D0047C005AF4E2 /* IDSwiftForumChatCell.swift */,
-				46AB85DF20D0047C005AF4E2 /* IDSwiftForumChatCell.xib */,
+				46AB85DE20D0047C005AF4E2 /* IDSwiftForumCell.swift */,
+				46AB85DF20D0047C005AF4E2 /* IDSwiftForumCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -232,6 +240,10 @@
 			children = (
 				468E298620CE9D2000AA9378 /* ChatTVCSwiftTest.swift */,
 				461609D720CEAD0700079586 /* ChatTVCSwiftTest.xib */,
+				46AB85EC20D13795005AF4E2 /* IDSwiftChatCellTest.swift */,
+				46AB85EE20D13C29005AF4E2 /* IDSwiftChatCellTest.xib */,
+				46AB85F020D14B46005AF4E2 /* IDSwiftForumCellTest.swift */,
+				46AB85F120D14B46005AF4E2 /* IDSwiftForumCellTest.xib */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -354,11 +366,13 @@
 			files = (
 				46AB85DD20CFE579005AF4E2 /* IDSwiftChatTVC.xib in Resources */,
 				468E295520CE945600AA9378 /* LaunchScreen.storyboard in Resources */,
+				46AB85EF20D13C29005AF4E2 /* IDSwiftChatCellTest.xib in Resources */,
 				468E295220CE945600AA9378 /* Assets.xcassets in Resources */,
-				46AB85E120D0047C005AF4E2 /* IDSwiftForumChatCell.xib in Resources */,
+				46AB85E120D0047C005AF4E2 /* IDSwiftForumCell.xib in Resources */,
 				461609D820CEAD0700079586 /* ChatTVCSwiftTest.xib in Resources */,
 				468E296620CE9AA600AA9378 /* IDSwiftChatCell.xib in Resources */,
 				46AB85D220CFE227005AF4E2 /* IDSwiftMessageComposerView.xib in Resources */,
+				46AB85F320D14B46005AF4E2 /* IDSwiftForumCellTest.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,12 +383,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46AB85F220D14B46005AF4E2 /* IDSwiftForumCellTest.swift in Sources */,
 				46AB85E320D00C9B005AF4E2 /* IDSwiftForumChatMessage.swift in Sources */,
 				468E296120CE963300AA9378 /* IDSwiftChatTVC.swift in Sources */,
 				468E294B20CE945500AA9378 /* AppDelegate.swift in Sources */,
 				468E296520CE9AA600AA9378 /* IDSwiftChatCell.swift in Sources */,
 				46AB85D820CFE240005AF4E2 /* IDSwiftMessageComposerView.swift in Sources */,
-				46AB85E020D0047C005AF4E2 /* IDSwiftForumChatCell.swift in Sources */,
+				46AB85E020D0047C005AF4E2 /* IDSwiftForumCell.swift in Sources */,
+				46AB85ED20D13795005AF4E2 /* IDSwiftChatCellTest.swift in Sources */,
 				468E298A20CE9EE200AA9378 /* IDSwiftChatMessage.swift in Sources */,
 				468E298720CE9D2000AA9378 /* ChatTVCSwiftTest.swift in Sources */,
 			);

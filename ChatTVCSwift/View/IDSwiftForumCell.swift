@@ -1,5 +1,5 @@
 //
-//  IDSwiftForumChatCell.swift
+//  IDSwiftForumCell.swift
 //  ChatTVCSwift
 //
 //  Created by David buhauer on 12/06/2018.
@@ -8,13 +8,19 @@
 
 import UIKit
 
-class IDSwiftForumChatCell: IDSwiftChatCell {
+class IDSwiftForumCell: IDSwiftChatCell {
 
     @IBOutlet weak var lblFrom: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        self.profileImageView?.isHidden = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

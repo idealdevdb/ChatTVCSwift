@@ -21,7 +21,10 @@ class IDSwiftChatTVC: UIViewController {
     @IBOutlet var messageInputContainerViewBottomConstraint: NSLayoutConstraint!
     
     internal let CELL_NIB_NAME_CHAT: String = String(describing: IDSwiftChatCell.self)
-    internal let CELL_NIB_NAME_FORUM: String = String(describing: IDSwiftForumChatCell.self)
+    internal let CELL_IDENTIFIER_CHAT: String = String(describing: IDSwiftChatCell.self)
+    
+    internal let CELL_NIB_NAME_FORUM: String = String(describing: IDSwiftForumCell.self)
+    internal let CELL_IDENTIFIER_FORUM: String = String(describing: IDSwiftForumCell.self)
     
     lazy var messages: [IDSwiftChatMessage] = [IDSwiftChatMessage]()
     lazy var chatType: IDSwiftChatType = .chat
@@ -53,8 +56,8 @@ class IDSwiftChatTVC: UIViewController {
         
         self.subscribeForKeyboardNotifications(true)
         
-        self.hideKeyboardWhenTappedAround()
-        
+        self.chatTableView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.didTapDismissKeyboard)))
+            
         self.view.layoutIfNeeded()
     }
     
@@ -62,13 +65,23 @@ class IDSwiftChatTVC: UIViewController {
         self.subscribeForKeyboardNotifications(false)
     }
     
-    func getNibCellName() -> String {
+    func getCellNibName() -> String {
         switch self.chatType {
         case .chat:
             return CELL_NIB_NAME_CHAT
             
         case .forum:
             return CELL_NIB_NAME_FORUM
+        }
+    }
+    
+    func getCellIdentifier() -> String {
+        switch self.chatType {
+        case .chat:
+            return CELL_NIB_NAME_CHAT
+            
+        case .forum:
+            return CELL_IDENTIFIER_FORUM
         }
     }
 
@@ -92,8 +105,8 @@ class IDSwiftChatTVC: UIViewController {
     
     // MARK: - Tableview
     func setupChatTableView() {
-        let cellNib: UINib = UINib(nibName: self.getNibCellName(), bundle: nil)
-        self.chatTableView?.register(cellNib, forCellReuseIdentifier: self.getNibCellName())
+        let cellNib: UINib = UINib(nibName: self.getCellNibName(), bundle: nil)
+        self.chatTableView?.register(cellNib, forCellReuseIdentifier: self.getCellIdentifier())
         self.chatTableView?.dataSource = self
         self.chatTableView?.delegate = self
         self.chatTableView?.separatorStyle = .none
@@ -140,7 +153,7 @@ class IDSwiftChatTVC: UIViewController {
         }
     }
     
-    private func messageForIndexPath(_ indexPath: IndexPath) -> IDSwiftChatMessage {
+    func messageForIndexPath(_ indexPath: IndexPath) -> IDSwiftChatMessage {
         return self.messages[indexPath.row]
     }
     
@@ -158,6 +171,12 @@ class IDSwiftChatTVC: UIViewController {
         }
     }
     
+    // MARK: - Actions
+    @objc func didTapDismissKeyboard() {
+        self.textViewToTypeIn.messageTextView.resignFirstResponder()
+    }
+    
+    // MARK: - Landscape
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         self.chatTableView.reloadData()
     }
@@ -172,13 +191,13 @@ extension IDSwiftChatTVC: UITableViewDataSource, UITableViewDelegate {
         
         switch self.chatType {
         case .chat:
-            if let cell: IDSwiftChatCell = tableView.dequeueReusableCell(withIdentifier: self.getNibCellName()) as? IDSwiftChatCell {
+            if let cell: IDSwiftChatCell = tableView.dequeueReusableCell(withIdentifier: self.getCellIdentifier()) as? IDSwiftChatCell {
                 cell_ = cell
             }
             break
             
         case .forum:
-            if let cell: IDSwiftForumChatCell = tableView.dequeueReusableCell(withIdentifier: self.getNibCellName()) as? IDSwiftForumChatCell {
+            if let cell: IDSwiftForumCell = tableView.dequeueReusableCell(withIdentifier: self.getCellIdentifier()) as? IDSwiftForumCell {
                 cell_ = cell
             }
             
@@ -214,6 +233,10 @@ extension IDSwiftChatTVC: UITableViewDataSource, UITableViewDelegate {
 }
 
 extension IDSwiftChatTVC: IDSwiftMessageComposerViewDelegate {
+    func messageComposerSendMessageClickedWithMessage(_ message: String) {
+        
+    }
+    
     func cameraButtonImage(_ sender: IDSwiftMessageComposerView) -> UIImage? {
         return nil
     }

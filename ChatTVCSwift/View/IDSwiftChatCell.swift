@@ -26,11 +26,11 @@ class IDSwiftChatCell: UITableViewCell {
     var timeStampAttributes: [NSAttributedStringKey: Any]?
     var messageAttributes: [NSAttributedStringKey: Any]?
     
-    let profileImageLocalUser: UIImage? = UIImage(named: "person1.png")
-    let profileImageRemoteUser: UIImage? = UIImage(named: "person2.png")
+    var profileImageLocalUser: UIImage?
+    var profileImageRemoteUser: UIImage?
     
-    let bubbleImageLocalUser: UIImage? = UIImage(named: "chat_bubble_green")
-    let bubbleImageRemoteUser: UIImage? = UIImage(named: "chat_bubble_grey")
+    var bubbleImageLocalUser: UIImage?
+    var bubbleImageRemoteUser: UIImage?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -47,7 +47,7 @@ class IDSwiftChatCell: UITableViewCell {
         self.profileImageView?.cancelImageDownload()
         self.profileImageView?.image = nil
         
-        self.activiateConstraintForOwner(false)
+        self.activiateConstraintForOwner(true)
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
