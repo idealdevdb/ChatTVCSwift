@@ -45,23 +45,25 @@ class IDSwiftMessageComposerView: UIView {
         self.contentView.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
         }
+        
+        self.messageTextView.textContainer.lineBreakMode = .byTruncatingTail
     }
     
     func setupCameraInputButton() {
         if let delegate_ = self.delegate, let image = delegate_.cameraButtonImage(self) {
             let action = #selector(self.didTapCameraButton)
-            self.addInputButtonWithImage(image, andAction: action)
+            self.addInputButtonWithImage(image, andTarget: self, andAction: action)
         }
     }
     
     func setupLocateMeInputButton() {
         if let delegate_ = self.delegate, let image = delegate_.locateMeButtonImage(self) {
             let action = #selector(self.didTapLocateMeButton)
-            self.addInputButtonWithImage(image, andAction: action)
+            self.addInputButtonWithImage(image, andTarget: self, andAction: action)
         }
     }
     
-    func addInputButtonWithImage(_ image: UIImage?, andAction action: Selector?) {
+    func addInputButtonWithImage(_ image: UIImage?, andTarget target:AnyObject?, andAction action: Selector?) {
         let container: UIView = UIView()
         container.backgroundColor = .clear
         
@@ -71,7 +73,7 @@ class IDSwiftMessageComposerView: UIView {
         button.imageView?.contentMode = .scaleAspectFit
         
         if let action_: Selector = action {
-            button.addTarget(self, action: action_, for: .touchUpInside)
+            button.addTarget(target, action: action_, for: .touchUpInside)
         }
         
         container.addSubview(button)

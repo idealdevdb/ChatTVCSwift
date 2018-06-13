@@ -33,7 +33,7 @@ class ChatTVCSwiftTest: IDSwiftChatTVC {
         self.textViewToTypeIn.messageTextView.placeholder =  NSLocalizedString("Skriv din besked her ...", comment: "")
         self.textViewToTypeIn.sendButton.backgroundColor = UIColor.clear
         
-        self.textViewToTypeIn.addInputButtonWithImage(UIImage(named: "person1.png"), andAction: #selector(self.dummyAction))
+        self.textViewToTypeIn.addInputButtonWithImage(UIImage(named: "person1.png"), andTarget: self, andAction: #selector(self.dummyAction))
     }
     
     @objc func dummyAction() {
