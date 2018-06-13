@@ -18,10 +18,6 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="144.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8mg-UP-l65">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="144.5"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J6l-Dz-EvC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
                         <subviews>
@@ -85,30 +81,25 @@
                 <constraints>
                     <constraint firstItem="UKa-HC-fDJ" firstAttribute="top" secondItem="J6l-Dz-EvC" secondAttribute="bottom" id="0ZC-mv-Qx9"/>
                     <constraint firstItem="J6l-Dz-EvC" firstAttribute="trailing" secondItem="UKa-HC-fDJ" secondAttribute="trailing" id="6Qc-jd-0O7"/>
-                    <constraint firstItem="8mg-UP-l65" firstAttribute="top" secondItem="4pI-RB-b7n" secondAttribute="top" id="96Y-dA-86m"/>
                     <constraint firstItem="J6l-Dz-EvC" firstAttribute="leading" secondItem="UKa-HC-fDJ" secondAttribute="leading" id="AgV-BY-ArR"/>
                     <constraint firstItem="UKa-HC-fDJ" firstAttribute="leading" secondItem="4pI-RB-b7n" secondAttribute="leading" id="BfY-z7-p4F"/>
                     <constraint firstAttribute="bottom" secondItem="UKa-HC-fDJ" secondAttribute="bottom" id="Mqo-vC-VuW"/>
-                    <constraint firstAttribute="trailing" secondItem="8mg-UP-l65" secondAttribute="trailing" id="OXd-Tw-yex"/>
-                    <constraint firstItem="8mg-UP-l65" firstAttribute="leading" secondItem="4pI-RB-b7n" secondAttribute="leading" id="abV-ez-JbD"/>
                     <constraint firstAttribute="trailing" secondItem="UKa-HC-fDJ" secondAttribute="trailing" id="sTX-IZ-WPc"/>
                     <constraint firstItem="J6l-Dz-EvC" firstAttribute="top" secondItem="4pI-RB-b7n" secondAttribute="top" id="xgN-V5-Ed3"/>
-                    <constraint firstAttribute="bottom" secondItem="8mg-UP-l65" secondAttribute="bottom" id="yFp-ij-QBc"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
-                <outlet property="imgFrom" destination="KPD-B8-eQR" id="2jZ-D9-IZg"/>
                 <outlet property="lblDate" destination="7rM-TO-SLu" id="VMU-ZE-dLc"/>
                 <outlet property="lblFrom" destination="Otc-lx-NVI" id="wEZ-Mn-DOu"/>
                 <outlet property="profileContainer" destination="J6l-Dz-EvC" id="KI5-Du-V5Y"/>
+                <outlet property="profileImageView" destination="KPD-B8-eQR" id="rsz-Fr-WF1"/>
                 <outlet property="txtMessage" destination="9ZR-L5-u8J" id="uVV-fX-eLN"/>
-                <outlet property="viewBackground" destination="8mg-UP-l65" id="cYw-bD-gux"/>
             </connections>
             <point key="canvasLocation" x="35" y="2.5"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="person1" width="576" height="720"/>
+        <image name="person1" width="300" height="300"/>
     </resources>
 </document>

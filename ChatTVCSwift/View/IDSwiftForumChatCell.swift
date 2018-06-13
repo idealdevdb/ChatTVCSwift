@@ -24,13 +24,15 @@ class IDSwiftForumChatCell: IDSwiftChatCell {
     }
     
     override func setupLayoutForMessage(_ message: IDSwiftChatMessage) {
+        super.setupLayoutForMessage(message)
+        
         if let message_: IDSwiftForumChatMessage = message as? IDSwiftForumChatMessage {
             if message_.isOwnMessage {
-                self.imgFrom.isHidden = true
-                self.lblFrom.text = "You"
+                self.profileImageView?.isHidden = true
+                self.lblFrom?.text = "You"
             } else {
-                self.imgFrom.isHidden = false
-                self.lblFrom.text = message_.messageFrom
+                self.profileImageView?.isHidden = false
+                self.lblFrom?.text = message_.messageFrom
             }
         }
     }

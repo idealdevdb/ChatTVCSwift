@@ -12,28 +12,38 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IDSwiftChatTVC" customModule="ChatTVCSwift" customModuleProvider="target">
             <connections>
-                <outlet property="chatTableView" destination="KPM-AR-HqZ" id="0MT-Hi-2zD"/>
-                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="chatTableView" destination="WJV-2w-WZU" id="ayz-vF-yIP"/>
+                <outlet property="messageInputContainerViewBottomConstraint" destination="scj-bv-bIa" id="ay0-HS-85u"/>
+                <outlet property="textViewToTypeIn" destination="UXc-2a-Whj" id="t6d-7h-dTW"/>
+                <outlet property="view" destination="Twn-uX-bCA" id="Bop-Mi-oqa"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+        <view contentMode="scaleToFill" id="Twn-uX-bCA">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="KPM-AR-HqZ">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="WJV-2w-WZU">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="619"/>
                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                 </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UXc-2a-Whj" customClass="IDSwiftMessageComposerView" customModule="ChatTVCSwift" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="619" width="375" height="48"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="KPM-AR-HqZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="DTL-15-tJv"/>
-                <constraint firstAttribute="trailing" secondItem="KPM-AR-HqZ" secondAttribute="trailing" id="Zhc-wS-Evp"/>
-                <constraint firstAttribute="bottom" secondItem="KPM-AR-HqZ" secondAttribute="bottom" id="Zx4-0n-I3p"/>
-                <constraint firstItem="KPM-AR-HqZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="rNa-ao-2a1"/>
+                <constraint firstItem="IgA-RC-ucv" firstAttribute="trailing" secondItem="UXc-2a-Whj" secondAttribute="trailing" id="6gy-SH-fei"/>
+                <constraint firstItem="WJV-2w-WZU" firstAttribute="top" secondItem="Twn-uX-bCA" secondAttribute="top" id="9AC-kV-E8d"/>
+                <constraint firstAttribute="trailing" secondItem="WJV-2w-WZU" secondAttribute="trailing" id="DZj-3m-AOe"/>
+                <constraint firstItem="UXc-2a-Whj" firstAttribute="top" secondItem="WJV-2w-WZU" secondAttribute="bottom" id="Xla-xQ-L3d"/>
+                <constraint firstItem="UXc-2a-Whj" firstAttribute="leading" secondItem="IgA-RC-ucv" secondAttribute="leading" id="ZXe-jZ-hgs"/>
+                <constraint firstItem="WJV-2w-WZU" firstAttribute="leading" secondItem="Twn-uX-bCA" secondAttribute="leading" id="nkz-cl-PDb"/>
+                <constraint firstItem="UXc-2a-Whj" firstAttribute="top" secondItem="Twn-uX-bCA" secondAttribute="top" constant="619" placeholder="YES" id="rAZ-sh-fbB"/>
+                <constraint firstAttribute="bottom" secondItem="UXc-2a-Whj" secondAttribute="bottom" id="scj-bv-bIa"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <viewLayoutGuide key="safeArea" id="IgA-RC-ucv"/>
         </view>
     </objects>
 </document>

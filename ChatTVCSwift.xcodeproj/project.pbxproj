@@ -166,6 +166,7 @@
 		468E294920CE945500AA9378 /* ChatTVCSwift */ = {
 			isa = PBXGroup;
 			children = (
+				46AB85E820D10027005AF4E2 /* Test */,
 				468E295E20CE95D400AA9378 /* Controllers */,
 				468E295D20CE95D000AA9378 /* View */,
 				468E295C20CE95CB00AA9378 /* Model */,
@@ -204,8 +205,6 @@
 			children = (
 				468E295F20CE963300AA9378 /* IDSwiftChatTVC.swift */,
 				46AB85DC20CFE579005AF4E2 /* IDSwiftChatTVC.xib */,
-				468E298620CE9D2000AA9378 /* ChatTVCSwiftTest.swift */,
-				461609D720CEAD0700079586 /* ChatTVCSwiftTest.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -226,6 +225,15 @@
 				468E299320CEAC2200AA9378 /* IDCommonNeedsTvOS.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		46AB85E820D10027005AF4E2 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				468E298620CE9D2000AA9378 /* ChatTVCSwiftTest.swift */,
+				461609D720CEAD0700079586 /* ChatTVCSwiftTest.xib */,
+			);
+			path = Test;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

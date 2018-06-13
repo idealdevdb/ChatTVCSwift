@@ -79,11 +79,13 @@ class IDSwiftChatTVC: UIViewController {
             let isKeyboardShowing: Bool = notification.name == Notification.Name.UIKeyboardWillShow
             
             self.messageInputContainerViewBottomConstraint?.constant = isKeyboardShowing ? keyboardFrame.height : 0
-            
+
+            self.view.setNeedsLayout()
+            self.view.layoutIfNeeded()
             UIView.animate(withDuration: 0, delay: 0, options: .curveEaseOut, animations: {
+                self.view.setNeedsLayout()
                 self.view.layoutIfNeeded()
             }) { (_) in
-                self.scrollToBottomAnimated(true)
             }
         }
     }
@@ -155,6 +157,10 @@ class IDSwiftChatTVC: UIViewController {
             NotificationCenter.default.removeObserver(self, name: Notification.Name.UIKeyboardWillHide, object: nil)
         }
     }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        self.chatTableView.reloadData()
+    }
 }
 
 // MARK: - UITableViewDataSource & UITableViewDelegate
@@ -182,6 +188,12 @@ extension IDSwiftChatTVC: UITableViewDataSource, UITableViewDelegate {
         cell_?.configCellForMessage(chatMessage)
 
         return cell_ ?? UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        UIView.performWithoutAnimation {
+            cell.layoutIfNeeded()
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

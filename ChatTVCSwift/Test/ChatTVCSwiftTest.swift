@@ -23,6 +23,7 @@ class ChatTVCSwiftTest: IDSwiftChatTVC {
             self.constructMessagesForum()
         }
         
+        self.view.backgroundColor = UIColor(red: 0.917647, green: 0.917647, blue: 0.917647, alpha: 1.000000)
         self.textViewToTypeIn.contentView.backgroundColor = UIColor(red: 0.917647, green: 0.917647, blue: 0.917647, alpha: 1.000000)
         self.textViewToTypeIn.messageTextView.layer.cornerRadius = 4
         self.textViewToTypeIn.messageTextView.font = UIFont.systemFont(ofSize: 14, weight: .regular)
