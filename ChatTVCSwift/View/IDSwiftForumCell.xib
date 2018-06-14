@@ -50,7 +50,7 @@
                         <constraints>
                             <constraint firstItem="DcD-A6-e1r" firstAttribute="centerY" secondItem="J6l-Dz-EvC" secondAttribute="centerY" id="Aok-r1-t2S"/>
                             <constraint firstAttribute="trailing" secondItem="7rM-TO-SLu" secondAttribute="trailing" constant="10" id="DKS-8x-Bad"/>
-                            <constraint firstAttribute="height" constant="40" id="RN7-i5-eBv"/>
+                            <constraint firstAttribute="height" priority="999" constant="40" id="RN7-i5-eBv"/>
                             <constraint firstItem="7rM-TO-SLu" firstAttribute="centerY" secondItem="J6l-Dz-EvC" secondAttribute="centerY" id="kK6-bP-nTH"/>
                             <constraint firstItem="7rM-TO-SLu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="DcD-A6-e1r" secondAttribute="trailing" constant="15" id="sTd-GU-eyu"/>
                             <constraint firstItem="DcD-A6-e1r" firstAttribute="leading" secondItem="J6l-Dz-EvC" secondAttribute="leading" constant="10" id="zJK-Tg-cfv"/>

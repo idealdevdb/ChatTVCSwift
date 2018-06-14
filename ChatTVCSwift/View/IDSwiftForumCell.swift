@@ -15,6 +15,8 @@ class IDSwiftForumCell: IDSwiftChatCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        self.profileImageView?.isHidden = true
     }
     
     override func prepareForReuse() {

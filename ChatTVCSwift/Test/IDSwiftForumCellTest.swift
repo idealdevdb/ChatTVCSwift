@@ -13,8 +13,10 @@ class IDSwiftForumCellTest: IDSwiftForumCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
-        self.profileImageRemoteUser = UIImage(named: "person2.png")
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -23,4 +25,24 @@ class IDSwiftForumCellTest: IDSwiftForumCell {
         // Configure the view for the selected state
     }
     
+    override func setupLayoutForMessage(_ message: IDSwiftChatMessage) {
+        super.setupLayoutForMessage(message)
+
+        self.lblFrom.font = UIFont.systemFont(ofSize: 14, weight: .bold)
+        
+        if message.isOwnMessage {
+            self.lblFrom.textColor = UIColor.green
+        } else {
+            self.lblFrom.textColor = UIColor.black
+        }
+        
+        self.txtMessage.font = UIFont.systemFont(ofSize: 14, weight: .regular)
+        self.txtMessage.textColor = UIColor.lightGray
+        
+        if message.isOwnMessage {
+            self.profileImageView?.image = UIImage(named: "person1.png")
+        } else {
+            self.profileImageView?.image = UIImage(named: "person2.png")
+        }
+    }
 }

@@ -11,14 +11,91 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="98" id="bsj-vU-L7s" customClass="IDSwiftChatCellTest" customModule="ChatTVCSwift" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="98"/>
-            <autoresizingMask key="autoresizingMask"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bsj-vU-L7s" id="gKM-V7-MPV">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="97.5"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" rowHeight="106" id="DBb-i1-l2l" customClass="IDSwiftChatCellTest" customModule="ChatTVCSwift" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="394" height="106"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DBb-i1-l2l" id="2LZ-YP-7sS">
+                <rect key="frame" x="0.0" y="0.0" width="394" height="105.5"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rot-Ss-Q3x">
+                        <rect key="frame" x="319" y="18" width="20" height="82.5"/>
+                    </imageView>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJX-32-g2a">
+                        <rect key="frame" x="329" y="23" width="0.0" height="72.5"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <string key="text">ksdlmlksdfmlmfldsmlkmfklsdmflmsfmsfdlksdmlsflsdmsdlækfmdslkfsdflmkldsfdslmldsksdlmlksdfmlmfldsmlkmfklsdmflmsfmsfdlksdmlsflsdmsdlækfmdslkfsdflmkldsfdslmldsksdlmlksdfmlmfldsmlkmfklsdmflmsfmsfdlksdmlsflsdmsdlækfmdslkfsdflmkldsfdslmldsksdlmlksdfmlmfldsmlkmfklsdmflmsfmsfdlksdmlsflsdmsdlækfmdslkfsdflmkldsfdslmldsksdlmlksdfmlmfldsmlkmfklsdmflmsfmsfdlksdmlsflsdmsdlækfmdslkfsdflmkldsfdslmlds</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TbR-Mn-wmC">
+                        <rect key="frame" x="334" y="0.0" width="60" height="105.5"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="person1" translatesAutoresizingMaskIntoConstraints="NO" id="m1j-PZ-E7V" customClass="IDAutoFetchImageView">
+                                <rect key="frame" x="10" y="60.5" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="VSm-5X-wrn"/>
+                                    <constraint firstAttribute="width" constant="40" id="aud-9w-6aa"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="j27-x2-JpW"/>
+                            <constraint firstAttribute="centerX" secondItem="m1j-PZ-E7V" secondAttribute="centerX" id="roR-QA-8pY"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="cyp-Le-oqa">
+                        <rect key="frame" x="0.0" y="0.0" width="394" height="13"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="13" id="gCV-04-v7P"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="TbR-Mn-wmC" secondAttribute="bottom" id="189-ZZ-7Eo"/>
+                    <constraint firstAttribute="trailing" secondItem="cyp-Le-oqa" secondAttribute="trailing" id="1GP-9Q-iSO"/>
+                    <constraint firstItem="TbR-Mn-wmC" firstAttribute="top" secondItem="2LZ-YP-7sS" secondAttribute="top" id="1vr-QI-ePD"/>
+                    <constraint firstAttribute="trailing" secondItem="hJX-32-g2a" secondAttribute="trailing" priority="900" constant="60" id="2ij-Mn-Nqa"/>
+                    <constraint firstItem="Rot-Ss-Q3x" firstAttribute="top" secondItem="cyp-Le-oqa" secondAttribute="bottom" constant="5" id="8yq-tp-w11"/>
+                    <constraint firstItem="TbR-Mn-wmC" firstAttribute="leading" secondItem="2LZ-YP-7sS" secondAttribute="leading" priority="999" id="CZK-dd-JLz"/>
+                    <constraint firstItem="Rot-Ss-Q3x" firstAttribute="bottom" secondItem="m1j-PZ-E7V" secondAttribute="bottom" id="IIT-Ue-1Fa"/>
+                    <constraint firstItem="hJX-32-g2a" firstAttribute="top" secondItem="cyp-Le-oqa" secondAttribute="bottom" constant="10" id="Nxu-7l-Ubg"/>
+                    <constraint firstItem="hJX-32-g2a" firstAttribute="leading" secondItem="TbR-Mn-wmC" secondAttribute="trailing" priority="999" constant="5" id="OeX-fc-Ciz"/>
+                    <constraint firstItem="Rot-Ss-Q3x" firstAttribute="centerX" secondItem="hJX-32-g2a" secondAttribute="centerX" id="Ryn-au-Z1E"/>
+                    <constraint firstItem="cyp-Le-oqa" firstAttribute="top" secondItem="2LZ-YP-7sS" secondAttribute="top" id="UHx-Je-onx"/>
+                    <constraint firstItem="Rot-Ss-Q3x" firstAttribute="width" secondItem="hJX-32-g2a" secondAttribute="width" constant="20" id="WCI-1i-97q"/>
+                    <constraint firstAttribute="trailing" secondItem="TbR-Mn-wmC" secondAttribute="trailing" id="aRt-Ru-Z2b"/>
+                    <constraint firstItem="cyp-Le-oqa" firstAttribute="leading" secondItem="2LZ-YP-7sS" secondAttribute="leading" id="eHB-cQ-Erf"/>
+                    <constraint firstItem="Rot-Ss-Q3x" firstAttribute="centerY" secondItem="hJX-32-g2a" secondAttribute="centerY" id="eOm-xh-q7d"/>
+                    <constraint firstItem="TbR-Mn-wmC" firstAttribute="leading" secondItem="hJX-32-g2a" secondAttribute="trailing" constant="5" id="rba-KD-0ae"/>
+                    <constraint firstItem="hJX-32-g2a" firstAttribute="leading" secondItem="2LZ-YP-7sS" secondAttribute="leading" priority="900" constant="60" id="tBg-4w-yBD"/>
+                    <constraint firstAttribute="bottom" secondItem="hJX-32-g2a" secondAttribute="bottom" constant="10" id="wBB-mD-ZFK"/>
+                </constraints>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="86.5" y="-105"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="bubbleImageView" destination="Rot-Ss-Q3x" id="SZH-63-oib"/>
+                <outlet property="lblDate" destination="cyp-Le-oqa" id="DIf-ke-QVb"/>
+                <outlet property="profileContainer" destination="TbR-Mn-wmC" id="bpH-Hj-lvq"/>
+                <outlet property="profileContainerSuperViewLeadingConstraint" destination="CZK-dd-JLz" id="slJ-6P-ITY"/>
+                <outlet property="profileContainerSuperViewTrailingConstraint" destination="aRt-Ru-Z2b" id="IZ4-th-4ak"/>
+                <outlet property="profileContainerTextMessageTrailingConstraint" destination="rba-KD-0ae" id="ljg-Z9-f5O"/>
+                <outlet property="profileImageView" destination="m1j-PZ-E7V" id="EfI-Vw-VyB"/>
+                <outlet property="textMessageProfileLeadingConstraint" destination="OeX-fc-Ciz" id="So7-vk-3Kc"/>
+                <outlet property="textMessageSuperViewLeadingConstraint" destination="tBg-4w-yBD" id="AXK-AG-KeX"/>
+                <outlet property="textMessageSuperViewTrailingConstraint" destination="2ij-Mn-Nqa" id="FUK-vs-a4H"/>
+                <outlet property="txtMessage" destination="hJX-32-g2a" id="6EC-3q-4Bx"/>
+            </connections>
+            <point key="canvasLocation" x="21" y="77"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="person1" width="300" height="300"/>
+    </resources>
 </document>

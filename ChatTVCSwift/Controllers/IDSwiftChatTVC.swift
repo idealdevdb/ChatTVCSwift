@@ -21,16 +21,15 @@ class IDSwiftChatTVC: UIViewController {
     @IBOutlet var messageInputContainerViewBottomConstraint: NSLayoutConstraint!
     
     internal let CELL_NIB_NAME_CHAT: String = String(describing: IDSwiftChatCell.self)
-    internal let CELL_IDENTIFIER_CHAT: String = String(describing: IDSwiftChatCell.self)
-    
     internal let CELL_NIB_NAME_FORUM: String = String(describing: IDSwiftForumCell.self)
-    internal let CELL_IDENTIFIER_FORUM: String = String(describing: IDSwiftForumCell.self)
     
     lazy var messages: [IDSwiftChatMessage] = [IDSwiftChatMessage]()
     lazy var chatType: IDSwiftChatType = .chat
     
     lazy var showCameraButton: Bool = false
     lazy var showLocateMeButton: Bool = false
+    
+    lazy var didLayout: Bool = false
     
     internal override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -57,8 +56,15 @@ class IDSwiftChatTVC: UIViewController {
         self.subscribeForKeyboardNotifications(true)
         
         self.chatTableView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.didTapDismissKeyboard)))
-            
-        self.view.layoutIfNeeded()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if !self.didLayout {
+            self.scrollToBottomAnimated(true)
+            self.didLayout = true
+        }
     }
     
     deinit {
@@ -74,21 +80,9 @@ class IDSwiftChatTVC: UIViewController {
             return CELL_NIB_NAME_FORUM
         }
     }
-    
-    func getCellIdentifier() -> String {
-        switch self.chatType {
-        case .chat:
-            return CELL_NIB_NAME_CHAT
-            
-        case .forum:
-            return CELL_IDENTIFIER_FORUM
-        }
-    }
 
     @objc func handleKeyboardNotification(notification: Notification) {
         if let userInfo = notification.userInfo, let keyboardFrame: CGRect = userInfo[UIKeyboardFrameEndUserInfoKey] as? CGRect {
-            print(keyboardFrame)
-
             let isKeyboardShowing: Bool = notification.name == Notification.Name.UIKeyboardWillShow
             
             self.messageInputContainerViewBottomConstraint?.constant = isKeyboardShowing ? keyboardFrame.height : 0
@@ -105,11 +99,12 @@ class IDSwiftChatTVC: UIViewController {
     
     // MARK: - Tableview
     func setupChatTableView() {
-        let cellNib: UINib = UINib(nibName: self.getCellNibName(), bundle: nil)
-        self.chatTableView?.register(cellNib, forCellReuseIdentifier: self.getCellIdentifier())
         self.chatTableView?.dataSource = self
         self.chatTableView?.delegate = self
         self.chatTableView?.separatorStyle = .none
+        
+        let cellNib: UINib = UINib(nibName: self.getCellNibName(), bundle: nil)
+        self.chatTableView.register(cellNib, forCellReuseIdentifier: self.getCellNibName())
     }
     
     func setupTextView() {
@@ -191,13 +186,13 @@ extension IDSwiftChatTVC: UITableViewDataSource, UITableViewDelegate {
         
         switch self.chatType {
         case .chat:
-            if let cell: IDSwiftChatCell = tableView.dequeueReusableCell(withIdentifier: self.getCellIdentifier()) as? IDSwiftChatCell {
+            if let cell: IDSwiftChatCell = tableView.dequeueReusableCell(withIdentifier: self.getCellNibName()) as? IDSwiftChatCell {
                 cell_ = cell
             }
             break
             
         case .forum:
-            if let cell: IDSwiftForumCell = tableView.dequeueReusableCell(withIdentifier: self.getCellIdentifier()) as? IDSwiftForumCell {
+            if let cell: IDSwiftForumCell = tableView.dequeueReusableCell(withIdentifier: self.getCellNibName()) as? IDSwiftForumCell {
                 cell_ = cell
             }
             
@@ -207,12 +202,6 @@ extension IDSwiftChatTVC: UITableViewDataSource, UITableViewDelegate {
         cell_?.configCellForMessage(chatMessage)
 
         return cell_ ?? UITableViewCell()
-    }
-    
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        UIView.performWithoutAnimation {
-            cell.layoutIfNeeded()
-        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

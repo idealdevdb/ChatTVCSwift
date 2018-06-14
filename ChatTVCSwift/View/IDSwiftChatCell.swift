@@ -11,7 +11,7 @@ import IDCommonNeeds
 
 class IDSwiftChatCell: UITableViewCell {
     
-    @IBOutlet var bubbleImageView: IDAutoFetchImageView!
+    @IBOutlet var bubbleImageView: UIImageView!
     @IBOutlet var profileImageView: IDAutoFetchImageView!
     @IBOutlet var profileContainer: UIView!
     @IBOutlet var lblDate: UILabel!
@@ -25,9 +25,6 @@ class IDSwiftChatCell: UITableViewCell {
     @IBOutlet var textMessageSuperViewLeadingConstraint: NSLayoutConstraint!
     var timeStampAttributes: [NSAttributedStringKey: Any]?
     var messageAttributes: [NSAttributedStringKey: Any]?
-    
-    var profileImageLocalUser: UIImage?
-    var profileImageRemoteUser: UIImage?
     
     var bubbleImageLocalUser: UIImage?
     var bubbleImageRemoteUser: UIImage?
@@ -56,7 +53,7 @@ class IDSwiftChatCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configCellForMessage(_ message: IDSwiftChatMessage) {
+    final func configCellForMessage(_ message: IDSwiftChatMessage) {
         if let messageAttributes_: [NSAttributedStringKey: Any] = self.messageAttributes {
             self.txtMessage?.attributedText = NSAttributedString(string: message.message, attributes: messageAttributes_)
         } else {
@@ -68,8 +65,6 @@ class IDSwiftChatCell: UITableViewCell {
         } else {
             self.lblDate?.text = message.messageTimeStamp
         }
-        
-        self.profileImageView?.image = message.isOwnMessage ? self.profileImageLocalUser : self.profileImageRemoteUser
         
         self.setupLayoutForMessage(message)
     }

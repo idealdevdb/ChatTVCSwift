@@ -18,11 +18,11 @@
                 <rect key="frame" x="0.0" y="0.0" width="394" height="105.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cH5-aB-wfr" customClass="IDAutoFetchImageView">
-                        <rect key="frame" x="50" y="18" width="289" height="82.5"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cH5-aB-wfr">
+                        <rect key="frame" x="319" y="18" width="20" height="82.5"/>
                     </imageView>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h77-fv-gaM">
-                        <rect key="frame" x="60" y="23" width="269" height="72.5"/>
+                        <rect key="frame" x="329" y="23" width="0.0" height="72.5"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <string key="text">ksdlmlksdfmlmfldsmlkmfklsdmflmsfmsfdlksdmlsflsdmsdlækfmdslkfsdflmkldsfdslmldsksdlmlksdfmlmfldsmlkmfklsdmflmsfmsfdlksdmlsflsdmsdlækfmdslkfsdflmkldsfdslmldsksdlmlksdfmlmfldsmlkmfklsdmflmsfmsfdlksdmlsflsdmsdlækfmdslkfsdflmkldsfdslmldsksdlmlksdfmlmfldsmlkmfklsdmflmsfmsfdlksdmlsflsdmsdlækfmdslkfsdflmkldsfdslmldsksdlmlksdfmlmfldsmlkmfklsdmflmsfmsfdlksdmlsflsdmsdlækfmdslkfsdflmkldsfdslmlds</string>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -68,26 +68,19 @@
                     <constraint firstItem="ZIH-H7-9Au" firstAttribute="top" secondItem="WMq-cq-2nG" secondAttribute="top" id="LeM-AN-0r3"/>
                     <constraint firstAttribute="trailing" secondItem="h77-fv-gaM" secondAttribute="trailing" priority="900" constant="60" id="PNJ-TX-Zh1"/>
                     <constraint firstItem="h77-fv-gaM" firstAttribute="top" secondItem="NpG-ri-fOU" secondAttribute="bottom" constant="10" id="WTG-rz-rhH"/>
-                    <constraint firstItem="h77-fv-gaM" firstAttribute="leading" secondItem="ZIH-H7-9Au" secondAttribute="trailing" constant="5" id="X7a-tO-y1F"/>
+                    <constraint firstItem="h77-fv-gaM" firstAttribute="leading" secondItem="ZIH-H7-9Au" secondAttribute="trailing" priority="999" constant="5" id="X7a-tO-y1F"/>
                     <constraint firstItem="cH5-aB-wfr" firstAttribute="top" secondItem="NpG-ri-fOU" secondAttribute="bottom" constant="5" id="bQ6-hE-Bdy"/>
                     <constraint firstItem="cH5-aB-wfr" firstAttribute="centerX" secondItem="h77-fv-gaM" secondAttribute="centerX" id="c3S-cd-9G5"/>
-                    <constraint firstItem="ZIH-H7-9Au" firstAttribute="leading" secondItem="WMq-cq-2nG" secondAttribute="leading" id="lTw-7q-6ex"/>
+                    <constraint firstItem="ZIH-H7-9Au" firstAttribute="leading" secondItem="WMq-cq-2nG" secondAttribute="leading" priority="999" id="lTw-7q-6ex"/>
                     <constraint firstAttribute="bottom" secondItem="h77-fv-gaM" secondAttribute="bottom" constant="10" id="til-bJ-eQL"/>
                     <constraint firstAttribute="trailing" secondItem="NpG-ri-fOU" secondAttribute="trailing" id="v8K-Q5-cMa"/>
                     <constraint firstItem="h77-fv-gaM" firstAttribute="leading" secondItem="WMq-cq-2nG" secondAttribute="leading" priority="900" constant="60" id="wjU-ij-qCm"/>
                     <constraint firstAttribute="bottom" secondItem="ZIH-H7-9Au" secondAttribute="bottom" id="x2c-jI-G7J"/>
                 </constraints>
-                <variation key="default">
-                    <mask key="constraints">
-                        <exclude reference="PNJ-TX-Zh1"/>
-                        <exclude reference="X7a-tO-y1F"/>
-                        <exclude reference="lTw-7q-6ex"/>
-                    </mask>
-                </variation>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
-                <outlet property="bubbleImageView" destination="cH5-aB-wfr" id="KfP-9A-wOA"/>
+                <outlet property="bubbleImageView" destination="cH5-aB-wfr" id="itp-BQ-39u"/>
                 <outlet property="lblDate" destination="NpG-ri-fOU" id="Apv-49-vL6"/>
                 <outlet property="profileContainer" destination="ZIH-H7-9Au" id="AtD-im-PXf"/>
                 <outlet property="profileContainerSuperViewLeadingConstraint" destination="lTw-7q-6ex" id="oJa-eH-Grm"/>

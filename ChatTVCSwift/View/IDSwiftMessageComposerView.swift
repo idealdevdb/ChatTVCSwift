@@ -45,8 +45,6 @@ class IDSwiftMessageComposerView: UIView {
         self.contentView.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
         }
-        
-        self.messageTextView.textContainer.lineBreakMode = .byTruncatingTail
     }
     
     func setupCameraInputButton() {
@@ -97,7 +95,7 @@ class IDSwiftMessageComposerView: UIView {
     }
     
     @IBAction func didTapSendButton(_ sender: UIButton) {
-        if let text_: String = self.messageTextView?.text {
+        if let text_: String = self.messageTextView?.text, !text_.isEmpty {
             self.messageTextView.text = ""
             self.delegate?.messageComposerSendMessageClickedWithMessage(text_)
         }

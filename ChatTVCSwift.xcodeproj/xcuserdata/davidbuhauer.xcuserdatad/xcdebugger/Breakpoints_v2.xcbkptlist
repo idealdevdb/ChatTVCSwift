@@ -41,29 +41,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ChatTVCSwift/Test/IDSwiftForumCellTest.swift"
-            timestampString = "550589999.432315"
+            filePath = "ChatTVCSwift/Test/ChatTVCSwiftTest.swift"
+            timestampString = "550673471.983554"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "awakeFromNib()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ChatTVCSwift/Test/IDSwiftForumCellTest.swift"
-            timestampString = "550589999.432391"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14"
-            landmarkName = "awakeFromNib()"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "getCellNibName()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
