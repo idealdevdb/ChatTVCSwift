@@ -14,7 +14,7 @@
             <connections>
                 <outlet property="chatTableView" destination="kaL-sz-GmX" id="kjU-t3-33H"/>
                 <outlet property="messageInputContainerViewBottomConstraint" destination="agJ-BG-5mm" id="AK0-oa-E9K"/>
-                <outlet property="textViewToTypeIn" destination="bTt-8y-EHO" id="6gM-sF-85S"/>
+                <outlet property="textViewToTypeIn" destination="bTt-8y-EHO" id="2hD-Qx-QBb"/>
                 <outlet property="view" destination="iN0-l3-epB" id="sJZ-kP-xjD"/>
             </connections>
         </placeholder>
@@ -27,7 +27,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="619"/>
                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                 </tableView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bTt-8y-EHO" customClass="IDSwiftMessageComposerView" customModule="ChatTVCSwift" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bTt-8y-EHO" customClass="IDSwiftMessageComposerView" customModule="IDCommonNeedsSwift">
                     <rect key="frame" x="0.0" y="619" width="375" height="48"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>

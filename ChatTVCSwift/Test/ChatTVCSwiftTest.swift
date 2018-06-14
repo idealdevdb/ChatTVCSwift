@@ -7,13 +7,14 @@
 //
 
 import UIKit
+import IDCommonNeedsSwift
 
 class ChatTVCSwiftTest: IDSwiftChatTVC {
-    
+        
     override func viewDidLoad() {
         self.showCameraButton = true
         self.showLocateMeButton = true
-        self.chatType = .forum
+        self.chatType = .chat
         
         super.viewDidLoad()
 

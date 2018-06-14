@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import IDCommonNeedsSwift
 
 class IDSwiftChatCellTest: IDSwiftChatCell {
 
